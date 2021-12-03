@@ -1,6 +1,6 @@
-#imagem-fundo {
-    background-image: url('/assets/fundo.jpg');
-    min-height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+#imagem-fundo{
+  background-image: url('https://get.pxhere.com/photo/desk-table-office-furniture-tableware-product-cool-image-cool-photo-product-design-1410553.jpg');
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

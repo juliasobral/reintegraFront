@@ -2,11 +2,17 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { LoginComponent } from './login/login.component';
+import { MenuComponent } from './menu/menu.component';
+import { PostagensComponent } from './postagens/postagens.component';
+import { RodapeComponent } from './rodape/rodape.component';
+import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
 {path: 'login', component: LoginComponent},
-{path: 'cadastro', component: CadastroComponent}
+{path: 'cadastro', component: CadastroComponent},
+{path: 'postagens', component: PostagensComponent},
+{path: 'sobrenos', component: SobreNosComponent}
 ];
 
 @NgModule({
