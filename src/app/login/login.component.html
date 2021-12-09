@@ -7,12 +7,12 @@
           <form action="">
             <div class="row mb-4">
               <label for="">E-mail</label>
-              <input type="text" placeholder="E-mail" class="form-control" />
+              <input [(ngModel)]='usuarioLogin.email' name="email" type="text" placeholder="E-mail" class="form-control" />
             </div>
     
             <div class="row mb-4">
               <label for="">Senha</label>
-              <input type="password" placeholder="Senha" class="form-control" />
+              <input [(ngModel)]= 'usuarioLogin.senha' name="senha" type="password" placeholder="Senha" class="form-control" />
             </div>
   
             <div class="row d-flex justify-content-center">
