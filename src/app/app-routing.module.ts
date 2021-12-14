@@ -15,6 +15,23 @@ const routes: Routes = [
 {path: 'postagens', component: PostagensComponent},
 {path: 'sobrenos', component: SobreNosComponent},
 {path: 'tema', component: TemaComponent},
+
+// {path: 'tema-edit/:id', _component: TemaEditComponent,
+// get component() {
+//     return this._component;
+//   },
+// set component(value) {
+//     this._component = value;
+//   },
+// },
+// {path: 'tema-delete/id', _component_1: TemaDeleteComponent,
+// get component() {
+//     return this._component_1;
+//   },
+// set component(value) {
+//     this._component_1 = value;
+//   },
+// }
 ];
 
 @NgModule({

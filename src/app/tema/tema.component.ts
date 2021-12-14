@@ -25,23 +25,27 @@ export class TemaComponent implements OnInit {
     if(environment.token == ''){
       this.router.navigate(['/login'])
     }
+
+    this.findAllTema()
+    
     this.temaService.refreshToken()
-     this.buscarTemas()
+     this.findAllTema()
 
     console.log('token no tema' + environment.token)
   }
 
-   buscarTemas(){
-     this.temaService.getAllTemas().subscribe((resp: Tema[])=>{
-       this.listaTemas = resp
-     })
-   }
+  findAllTema(){
+    this.temaService.getAllTemas().subscribe((resp: Tema[]) =>{
+      this.listaTemas =  resp
+    })
+  }
+
 
    cadastrar(){
      this.temaService.postTema(this.tema).subscribe((resp: Tema) => {
        this.tema = resp;
        alert('Tema cadastrado meu bom... ☺')
-     this.buscarTemas()
+     this.findAllTema()
        this.tema = new Tema()
      })
    }
