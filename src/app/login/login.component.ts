@@ -11,11 +11,11 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  usuarioLogin: UsuarioLogin=  new UsuarioLogin
-  router: any;
+  usuarioLogin: UsuarioLogin=  new UsuarioLogin()
 
   constructor(
-    private auth: AuthService
+    private auth: AuthService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -29,11 +29,10 @@ entrar(){
       environment.foto = this.usuarioLogin.foto
       environment.tipo = this.usuarioLogin.tipo
       environment.nome = this.usuarioLogin.nomeCompleto
-      environment.idUsuario = this.usuarioLogin.idUsuario
       environment.token = this.usuarioLogin.token
       environment.id = this.usuarioLogin.id
 
-      this.router.navigate(['/inicio'])
+      this.router.navigate(['/sobrenos'])
     }, erro => {
       if (erro.status == 401) {
         alert("Usuário e/ou senha inválidos!")

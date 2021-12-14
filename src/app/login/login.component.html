@@ -7,17 +7,20 @@
         <form action="">
           <div class="row mb-4">
             <label for="">E-mail</label>
-            <input type="text" placeholder="E-mail" class="form-control" />
+            <input type="text" placeholder="E-mail" class="form-control" name='usuario' [(ngModel)]='usuarioLogin.email' />
           </div>
   
           <div class="row mb-4">
             <label for="">Senha</label>
-            <input type="password" placeholder="Senha" class="form-control" />
+            <input type="password" placeholder="Senha" class="form-control" name='senha' [(ngModel)]='usuarioLogin.senha' />
           </div>
 
           <div class="row d-flex justify-content-center">
-            <button class="btn btn-outline-dark w-25">Entrar</button>
-          </div>
+            <button class="btn btn-outline-dark w-25" (click)="entrar()">Entrar</button>
+          </div> 
+
+          
+
         </form>
 
         <hr>
