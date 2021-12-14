@@ -6,7 +6,7 @@ import { MenuComponent } from './menu/menu.component';
 import { PostagensComponent } from './postagens/postagens.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
-import { TemasComponent } from './temas/temas.component';
+import { TemaComponent } from './tema/tema.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -14,7 +14,7 @@ const routes: Routes = [
 {path: 'cadastro', component: CadastrarComponent},
 {path: 'postagens', component: PostagensComponent},
 {path: 'sobrenos', component: SobreNosComponent},
-{path: 'temas', component: TemasComponent}
+{path: 'tema', component: TemaComponent},
 ];
 
 @NgModule({

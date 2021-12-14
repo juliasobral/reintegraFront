@@ -11,8 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { CadastrarComponent } from './cadastro/cadastro.component';
 import { PostagensComponent } from './postagens/postagens.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
-import { TemaComponent } from './app/tema/tema.component';
-import { TemasComponent } from './temas/temas.component';
+import { TemaComponent } from './tema/tema.component';
 
 
 @NgModule({
@@ -24,8 +23,7 @@ import { TemasComponent } from './temas/temas.component';
     CadastrarComponent,
     PostagensComponent,
     SobreNosComponent,
-    TemaComponent,
-    TemasComponent
+    TemaComponent
   ],
   imports: [
     BrowserModule,
