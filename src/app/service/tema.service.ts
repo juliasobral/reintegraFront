@@ -9,9 +9,7 @@ import { Tema } from '../model/Tema';
 })
 export class TemaService {
 
-  constructor(
-    private http: HttpClient
-  ) { }
+  constructor(private http: HttpClient) { }
 
   token = {
     headers: new HttpHeaders().set('Authorization', environment.token)
@@ -26,8 +24,12 @@ export class TemaService {
     return this.http.get<Tema[]>('http://localhost:8080/tema', this.token)
   }
 
+  getByIdTema(id: number): Observable<Tema>{
+    return this.http.get<Tema>(`http://localhost:8080/tema/${id}`, this.token)
+  }
+
   postTema(tema: Tema): Observable<Tema> {
-    return this.http.post<Tema>('https://blogpessoalthiago.herokuapp.com/temas', tema, this.token)
+    return this.http.post<Tema>('http://localhost:8080/tema', tema, this.token)
   }
 
   putTema(tema: Tema): Observable<Tema>{
