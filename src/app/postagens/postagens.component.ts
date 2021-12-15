@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Tema } from '../model/Tema';
+import { TemaService } from '../service/tema.service';
 
 @Component({
   selector: 'app-postagens',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostagensComponent implements OnInit {
 
-  constructor() { }
+  tema: Tema = new Tema()
+  listaTemas: Tema[]
+  constructor(
+    private temaService: TemaService
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.findAllTema()
+  }
+
+  findAllTema(){
+    this.temaService.getAllTemas().subscribe((resp: Tema[]) =>{
+      this.listaTemas =  resp
+    })
   }
 
 }

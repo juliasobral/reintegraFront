@@ -11,26 +11,30 @@
     </div>
         <div class="form-group">
           <label for="exampleFormControlFile1">Escolha sua Imagem</label>
-          <input type="file" class="form-control-file" id="exampleFormControlFile1">
+          <input type="text" class="form-control-file" id="exampleFormControlFile1">
         </div>
         <div class="form-group">
           <h2 class="fs-54 text-center">Temas</h2>
         </div>
         <div class="form-group">
       <h5 class="fs-18 text-center">
-        Veja aqui as áreas de atuação ou <a routerLink='/temas'>cadastre uma nova:</a> 
+        Veja aqui as áreas de atuação ou <a routerLink='/tema'>cadastre uma nova:</a> 
       </h5>
       <div class="row d-flex justify-content-center mt-4 mb-5">
         <div class="col-md-3">
           <div class="form-group">
-            <input
+            <!-- <input
               type="text"
               class="form-control"
               id="descricao"
-              placeholder="Digite a descrição do tema"
+              placeholder="Digite a descrição da postagem"
               name="descricao"
-              [(ngModel)]="tema.descricao"
-            />
+              [(ngModel)]="postagem.titulo"
+            /> -->
+
+            <select name="temas" id="temas">
+              <option *ngFor='let tema of listaTemas' value="{{tema.idTema}}">Area de atuação: {{tema.areas}} / Tipo da vaga: {{tema.tipoVagas}} / Local da vaga: {{tema.localizacao}}</option>
+            </select>
           </div>
         </div>
       </div>

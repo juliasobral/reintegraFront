@@ -27,6 +27,8 @@ export class TemaComponent implements OnInit {
     }
 
     this.findAllTema()
+
+    console.log(environment)
     
     this.temaService.refreshToken()
      this.findAllTema()
@@ -43,8 +45,13 @@ export class TemaComponent implements OnInit {
 
    cadastrar(){
      this.temaService.postTema(this.tema).subscribe((resp: Tema) => {
+<<<<<<< HEAD
        this.tema = resp;
        alert('Seu tema foi cadastrado com sucesso!')
+=======
+       this.tema = resp
+       alert('Tema cadastrado com sucesso!')
+>>>>>>> ad67008b102e61ce3a27c19862699f88c51d91a6
      this.findAllTema()
        this.tema = new Tema()
      })
