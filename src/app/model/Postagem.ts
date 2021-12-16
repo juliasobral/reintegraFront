@@ -9,5 +9,5 @@ export class Postagem{
     public data: Date
     public criador: Usuario
     public temaRelacionado: Tema
-  tema: Tema
+    public tema: Tema
 }

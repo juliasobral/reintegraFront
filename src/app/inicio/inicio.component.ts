@@ -68,7 +68,7 @@ export class InicioComponent implements OnInit {
 
   publicar(){
     this.tema.idTema = this.idTema
-    this.postagem.temaRelacionado = this.tema
+    // this.postagem.tema = this.tema
 
     this.usuario.idUsuario = this.idUsuario
     this.postagem.criador = this.usuario

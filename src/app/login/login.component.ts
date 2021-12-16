@@ -38,7 +38,7 @@ entrar(){
 
       console.log(environment)
 
-      this.router.navigate(['/sobrenos'])
+      this.router.navigate(['/inicio'])
     }, erro => {
       if (erro.status == 401) {
         alert("Usuário e/ou senha inválidos!")
