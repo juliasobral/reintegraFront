@@ -11,7 +11,6 @@ export class PostagemService {
 
   constructor(
     private http: HttpClient,
-    private postagemService: PostagemService
   ) { }
 
   token = {
@@ -27,7 +26,7 @@ export class PostagemService {
   }
 
   postPostagem(postagem: Postagem): Observable<Postagem>{
-    return this.http.post<Postagem>('http://localhost:8080/postagem', postagem, this.token)
+    return this.http.post<Postagem>('http://localhost:8080/postagens', postagem, this.token)
   }
 
   putPostagem(postagem: Postagem): Observable<Postagem>{
