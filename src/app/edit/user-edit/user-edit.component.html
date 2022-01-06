@@ -1,0 +1,59 @@
+<div class="containe">
+
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center text-secondary">Atualizar meu usuário</h1>>
+        </div>
+    </div>
+
+    <div class="col-md-6 d-flex justify-content-center align-items-center">
+  
+        <div class="col-md-6">
+  
+          <form action="">
+            <div class="row mb-4">
+              <label for="">Nome</label>
+              <input [(ngModel)]='usuario.nomeCompleto' name="nome" type="text" placeholder="Digite seu nome" class="form-control" />
+            </div>
+  
+            <div class="row mb-4">
+              <label for="">E-mail</label>
+              <input [(ngModel)]='usuario.email' name="email" type="email" placeholder="digite seu E-mail" class="form-control" />
+            </div>
+    
+            <div class="row mb-4">
+              <label for="foto">Link da foto</label>
+              <input [(ngModel)]='usuario.foto' class="form-control" type="text" name="foto" id="foto" placeholder="Link da sua foto">
+            </div>
+
+            <div class="row mb-4">
+              <label for="">Senha</label>
+              <input (input)='confirmSenha($event)' name="senha" type="password" placeholder="Senha" class="form-control" />
+            </div>
+  
+            <div class="row mb-4">
+              <label for="">Confirmar senha</label>
+              <input [(ngModel)]='usuario.senha' name="confirmarSenha" type="password" placeholder="Confirmar senha" class="form-control" />
+            </div>
+  
+            <div class="row mb-4">
+              <label for="">Tipo de usuário</label>
+              <select name="tipo" id="tipo" class="form-control" placeholder='Selecione o tipo de usuário' (change)='tipoUser($event)'>
+                <option>Selecione o tipo de usuário</option>
+                <option value="admin">Pessoa Física</option>
+                <option value="padrao">Pessoa Jurídica</option>
+              </select>
+            </div>
+  
+            <div class="row d-flex justify-content-center">
+                <button type="submit" class="btn btn-danger mr-4" routerLink= '/inicio'>Cancelar</button>
+              <button type="submit" class="btn btn-outline-dark w-50" (click)= 'atualizar()'>Atualizar</button>
+            </div>
+          </form>
+  
+          <hr>
+        
+        </div>
+      </div>
+
+</div>
