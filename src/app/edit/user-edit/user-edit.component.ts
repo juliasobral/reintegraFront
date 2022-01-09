@@ -27,8 +27,10 @@ export class UserEditComponent implements OnInit {
     window.scroll(0,0)
 
     if(environment.token == ''){
-      this.router.navigate(['/entrar'])
+      this.router.navigate(['/login'])
     }
+
+    this.authService.refreshToken()
 
     this.idUsuario = this.route.snapshot.params['id']
     this.findByIdUsuario(this.idUsuario)
@@ -49,7 +51,7 @@ export class UserEditComponent implements OnInit {
       alert('As senhas não são iguais.')
     } else {
       console.log(this.usuario)
-      this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
+      this.authService.editar(this.usuario).subscribe((resp: Usuario) => {
         this.usuario = resp
         this.router.navigate(['/inicio'])
         alert('Usuário atualizado com sucesso, faça o login novamente!')
@@ -57,7 +59,7 @@ export class UserEditComponent implements OnInit {
         environment.nome=''
         environment.foto=''
         environment.id = 0
-        this.router.navigate(['/entrar'])
+        this.router.navigate(['/login'])
       })
     }
 

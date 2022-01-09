@@ -36,6 +36,10 @@ export class AuthService {
     return this.http.get<Usuario>(`https://reintegra.herokuapp.com/usuario/${id}`, this.token)
   }
 
+  editar(usuario: Usuario): Observable<Usuario>{
+    return this.http.put<Usuario>('https://reintegra.herokuapp.com/usuario', usuario, this.token)
+  }
+
   logado(){
     let ok: boolean = false
 
